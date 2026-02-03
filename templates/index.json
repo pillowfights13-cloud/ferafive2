@@ -85,7 +85,7 @@
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": "products",
+            "collection": "bestseller",
             "products_count": 3,
             "title": "",
             "link_url": "",
