@@ -10,6 +10,7 @@
 {
   "current": {
     "section_vertical_spacing": "md",
+    "default_color_scheme": "scheme-2",
     "product_rating_color": "#1c1c1c",
     "product_on_sale_accent": "#e32c2b",
     "product_sold_out_badge_background": "#efefef",
@@ -75,6 +76,17 @@
           "text_color": "#ffffff",
           "primary_button_background": "#ffffff",
           "primary_button_text_color": "#c30012",
+          "circle_button_background": "#ffffff",
+          "circle_button_icon": "#1c1c1c"
+        }
+      },
+      "scheme-87243356-6eb7-48d8-9ce3-62b1bf29fb3f": {
+        "settings": {
+          "background": "#ffffff",
+          "background_gradient": "",
+          "text_color": "#1c1c1c",
+          "primary_button_background": "#c30012",
+          "primary_button_text_color": "#ffffff",
           "circle_button_background": "#ffffff",
           "circle_button_icon": "#1c1c1c"
         }
