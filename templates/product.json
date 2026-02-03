@@ -57,6 +57,10 @@
             "payment_button_text_color": ""
           }
         },
+        "share_buttons_RAVQ8E": {
+          "type": "share_buttons",
+          "settings": {}
+        },
         "separator": {
           "type": "separator",
           "settings": {}
@@ -87,6 +91,7 @@
         "quantity_selector",
         "variant_picker",
         "buy_buttons",
+        "share_buttons_RAVQ8E",
         "separator",
         "description",
         "complementary_products"
