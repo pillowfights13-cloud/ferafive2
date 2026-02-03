@@ -96,6 +96,7 @@
       "block_order": [
         "collection-1"
       ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
