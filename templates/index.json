@@ -323,57 +323,6 @@
         "cursor_arrows_color": "#000000"
       }
     },
-    "image-with-text-scroll": {
-      "type": "images-with-text-scroll",
-      "blocks": {
-        "item-1": {
-          "type": "image_with_text",
-          "settings": {
-            "subheading": "",
-            "title": "#1",
-            "content": "<p>Welcome your customers to your store by sharing temporary offers or explaining to them what your products are about.</p>",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "solid"
-          }
-        },
-        "item-2": {
-          "type": "image_with_text",
-          "settings": {
-            "subheading": "",
-            "title": "#2",
-            "content": "<p>Create trust with your customers by explaining the story of your brand. Share your values or what is important to you.</p>",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "solid"
-          }
-        },
-        "item-3": {
-          "type": "image_with_text",
-          "settings": {
-            "subheading": "",
-            "title": "#3",
-            "content": "<p>Share information about your product with your customers. Describe a product, and share info about your production process...</p>",
-            "link_text": "",
-            "link_url": "",
-            "link_style": "solid"
-          }
-        }
-      },
-      "block_order": [
-        "item-1",
-        "item-2",
-        "item-3"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "image_position": "start",
-        "text_alignment": "center",
-        "heading_tag": "h3",
-        "overlay_color": "#000000",
-        "overlay_opacity": 0
-      }
-    },
     "multiple-media-with-text": {
       "type": "multiple-media-with-text",
       "blocks": {
@@ -490,10 +439,9 @@
     "multi-column",
     "collection-list",
     "before-after",
-    "image-with-text-scroll",
     "multiple-media-with-text",
-    "newsletter",
     "shop-the-look",
-    "blog-posts"
+    "blog-posts",
+    "newsletter"
   ]
 }
