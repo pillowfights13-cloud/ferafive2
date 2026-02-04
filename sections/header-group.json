@@ -42,6 +42,9 @@
     },
     "header": {
       "type": "header",
+      "custom_css": [
+        ".header{padding: 0px; padding-inline: 48px;}"
+      ],
       "settings": {
         "color_scheme": "",
         "enable_sticky": true,
