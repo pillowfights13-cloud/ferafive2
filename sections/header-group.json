@@ -43,7 +43,8 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".header {padding: 0px; padding-inline: 48px; padding-block:10px;}"
+        ".header {padding: 0px; padding-inline: 48px; padding-block: 10px;}",
+        "@media (max-width: 768px) {.header {padding-inline: 18px; }}"
       ],
       "settings": {
         "color_scheme": "",
@@ -53,7 +54,7 @@
         "reduce_padding": true,
         "logo": "shopify://shop_images/websitelogo.png",
         "logo_max_width": 120,
-        "logo_mobile_max_width": 75,
+        "logo_mobile_max_width": 100,
         "menu": "main-menu",
         "sidebar_menu": "",
         "menu_open_trigger": "hover",
