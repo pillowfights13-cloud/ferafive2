@@ -14,14 +14,21 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_4hcfCE": {
+          "type": "message",
+          "settings": {
+            "text": "<strong>Valentine Sale is live</strong>"
+          }
+        },
         "message-1": {
           "type": "message",
           "settings": {
-            "text": "Announce something here"
+            "text": "<strong>Valentine Sale is live</strong>"
           }
         }
       },
       "block_order": [
+        "message_4hcfCE",
         "message-1"
       ],
       "settings": {
