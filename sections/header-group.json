@@ -34,9 +34,9 @@
       "settings": {
         "color_scheme": "scheme-729e6953-0f20-4dfe-9a3c-9185208c7752",
         "enable_sticky": false,
-        "autoplay": false,
+        "autoplay": true,
         "cycle_speed": 5,
-        "desktop_font_size": 11,
+        "desktop_font_size": 12,
         "mobile_font_size": 10
       }
     },
