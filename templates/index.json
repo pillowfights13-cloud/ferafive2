@@ -96,7 +96,9 @@
       "block_order": [
         "collection-1"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".v-stack h2 {font-family: \"Acumin Pro Wide Medium\", sans-serif; font-weight: bold; font-size: 42px;}"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
