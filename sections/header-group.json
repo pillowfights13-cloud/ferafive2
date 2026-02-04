@@ -43,7 +43,7 @@
     "header": {
       "type": "header",
       "custom_css": [
-        ".header{padding: 0px; padding-inline: 48px;}"
+        ".header {padding: 0px; padding-inline: 48px; padding-block:10px;}"
       ],
       "settings": {
         "color_scheme": "",
