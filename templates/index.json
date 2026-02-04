@@ -87,7 +87,7 @@
           "settings": {
             "collection": "bestseller",
             "products_count": 3,
-            "title": "OUR BEST SELLERS",
+            "title": "NEW LAUNCHES",
             "link_url": "shopify://collections/bestseller",
             "link_text": "Explore More"
           }
