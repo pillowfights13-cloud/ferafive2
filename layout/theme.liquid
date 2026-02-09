@@ -85,6 +85,7 @@
     {{ content_for_header }}
 
     {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+    {{ 'hero-multicolumn.css' | asset_url | stylesheet_tag }}
   </head>
 
   {% liquid
