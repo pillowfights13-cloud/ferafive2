@@ -158,6 +158,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/U9A6243.webp",
+            "imageMobile": "shopify://shop_images/U9A6287.webp",
             "title": "Skincare designed for women who trust themselves.",
             "url": "",
             "contentPosition": "bottom left",
