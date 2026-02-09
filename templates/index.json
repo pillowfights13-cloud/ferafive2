@@ -211,8 +211,8 @@
         "collection-1"
       ],
       "custom_css": [
-        ".v-stack h2 {font-size: 42px;}",
-        ".v-stack p.h6.text-center {font-size: 15px !important; font-weight: 400; letter-spacing: 1.2px; text-transform: uppercase; color: #8a8a8a;}"
+        ".v-stack p.h6.text-center {font-size: 15px !important; font-weight: 400; letter-spacing: 1.2px; text-transform: uppercase; color: #8a8a8a;}",
+        "/* Mobile */@media (max-width: 768px) {.v-stack h2 {font-size: 10px !important; } .v-stack p.h6.text-center {font-size: 13px !important; letter-spacing: 1px; }}"
       ],
       "settings": {
         "color_scheme": "scheme-2",
