@@ -139,48 +139,6 @@
         "controls_color": "#ffffff"
       }
     },
-    "hero_double_hVG64e": {
-      "type": "hero-double",
-      "blocks": {
-        "image_gKVWGL": {
-          "type": "image",
-          "settings": {
-            "title": "Your hero image heading",
-            "url": "",
-            "contentPosition": "top left",
-            "heroColor": "#000000",
-            "heroBg": "#ffffff",
-            "heroHasBg": false
-          }
-        },
-        "video_nVMn8U": {
-          "type": "video",
-          "settings": {
-            "videoLoop": false,
-            "videoMute": true,
-            "videoAutoplay": false,
-            "clickToPlay": true,
-            "playPause": false,
-            "title": "Your hero video heading",
-            "url": "",
-            "contentPosition": "top left",
-            "heroColor": "#000000",
-            "heroBg": "#ffffff",
-            "heroHasBg": false
-          }
-        }
-      },
-      "block_order": [
-        "image_gKVWGL",
-        "video_nVMn8U"
-      ],
-      "name": "Hero multicolumn",
-      "settings": {
-        "perRow": "2",
-        "perRowMob": "1",
-        "uniformMedia": true
-      }
-    },
     "featured-collections": {
       "type": "featured-collections",
       "blocks": {
@@ -459,7 +417,6 @@
   },
   "order": [
     "slideshow",
-    "hero_double_hVG64e",
     "featured-collections",
     "collection-list",
     "multiple-media-with-text",
