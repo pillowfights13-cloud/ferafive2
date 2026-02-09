@@ -363,13 +363,34 @@
 {% comment %} Not Recommended Just to Test {% endcomment %}
 
 <style>
-  .footer-bottom-bold {
+ .footer-bottom-bold {
   text-align: center;
   width: 100%;
   font-weight: bold;
   margin: 0;
   line-height: 1;
-  font-size: clamp(1.2rem, 4vw, 3rem);
+  font-size: 2rem; /* default for mobile */
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  .footer-bottom-bold {
+    font-size: 6rem;
+  }
+}
+
+/* Small laptops */
+@media (min-width: 1024px) {
+  .footer-bottom-bold {
+    font-size: 12rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .footer-bottom-bold {
+    font-size: 20rem;
+  }
 }
 
 </style>
