@@ -39,6 +39,7 @@
         "heading_8UXkNW",
         "richtext_6tEGxz"
       ],
+      "custom_css": [],
       "name": "t:sections.rich_text.presets.rich_text.name",
       "settings": {
         "color_scheme": "scheme-2",
@@ -57,11 +58,24 @@
         "title": "Contact",
         "content": ""
       }
+    },
+    "custom_liquid_TTGzgr": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": false,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n.shopify-section--rich-text{\n  margin-top : 50px !important;\n}\n</style>",
+        "text_alignment": "center"
+      }
     }
   },
   "order": [
     "main",
     "rich_text_DX6eMt",
-    "contact-form"
+    "contact-form",
+    "custom_liquid_TTGzgr"
   ]
 }
