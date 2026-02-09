@@ -372,3 +372,33 @@
   ]
 }
 {% endschema %}
+
+
+<style>
+/* Hero double */
+.hero-double x-grid { gap: var(--globalBorderWidth) }
+.hero-double > x-grid > x-cell { outline: var(--globalBorder) }
+.hero-double x-cell { position: relative }
+
+.hero-double img { width: 100% }
+.hero-double .title {
+    margin: calc(var(--padding) * 1.6);
+    max-width: calc(100% - var(--padding) * 2);
+    width: fit-content;
+    border-radius: calc(var(--radius) / 7);
+}
+
+.hero-double [media-type="video"] .contents { pointer-events: none }
+.hero-double video { width:100%; height:100% }
+
+.hero-double x-flex.contents { position: absolute; inset: 0; z-index: 1; }
+.hero-double x-flex.contents .hasBg { display: block }
+
+.hero-double [uniform-media="true"] video-player { height: 100% }
+.hero-double [uniform-media="true"] picture { display: contents }
+.hero-double [uniform-media="true"] :is(img,video) { height: 100%; object-fit: cover }
+
+.hero-double [media-type="video"][has-url="true"] .contents { pointer-events: all }
+
+@media (max-width: 777px) { .hero-double .title { margin: calc(var(--padding) + var(--margin)); max-width: calc(100% - var(--padding) * 2) } }
+    </style>
