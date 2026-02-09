@@ -43,9 +43,9 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
-        "content_width": "sm",
+        "content_width": "md",
         "text_position": "center",
-        "remove_vertical_spacing": false
+        "remove_vertical_spacing": true
       }
     },
     "contact-form": {
