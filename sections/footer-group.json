@@ -23,10 +23,18 @@
             "button_text_color": ""
           }
         },
+        "links_TNXjp9": {
+          "type": "links",
+          "settings": {
+            "menu": "main-menu",
+            "show_menu_title": true,
+            "menu_title": ""
+          }
+        },
         "links": {
           "type": "links",
           "settings": {
-            "menu": "footer",
+            "menu": "policy",
             "show_menu_title": true,
             "menu_title": ""
           }
@@ -42,6 +50,7 @@
       },
       "block_order": [
         "newsletter",
+        "links_TNXjp9",
         "links",
         "text"
       ],
