@@ -63,11 +63,11 @@
       "type": "custom-liquid",
       "name": "t:sections.custom_liquid.presets.custom_liquid.name",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": false,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false,
-        "liquid": "<style>\n.shopify-section--rich-text{\n  margin-top : 50px !important;\n}\n</style>",
+        "liquid": "<style>\n.shopify-section--rich-text{\n  margin-block : 50px !important;\n}\n</style>",
         "text_alignment": "center"
       }
     }
