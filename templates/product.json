@@ -119,6 +119,30 @@
         "max_image_zoom_level": 1
       }
     },
+    "custom_liquid_AE9Jt4": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "{% assign sections = product.metafields.custom.image_and_features.value %}\n\n{% if sections != blank %}\n  <section class=\"pf-sections\">\n    <div class=\"pf-sections__wrap\">\n\n      <!-- ===================== -->\n      <!-- DESKTOP: Alternating -->\n      <!-- ===================== -->\n      <div class=\"pf-desktop-only\">\n        {% for item in sections %}\n          {% assign is_even = forloop.index | modulo: 2 %}\n\n          <div class=\"pf-row {% if is_even == 0 %}pf-row--reverse{% endif %}\">\n            <div class=\"pf-text\">\n              {% if item.title != blank %}\n                <h3 class=\"pf-title\">{{ item.title }}</h3>\n              {% endif %}\n              <div class=\"pf-body\">\n                {{ item.text | metafield_tag }}\n              </div>\n            </div>\n\n            <div class=\"pf-image\">\n              {% if item.image != blank %}\n                <img\n                  src=\"{{ item.image | image_url: width: 1600 }}\"\n                  alt=\"{{ item.title | escape }}\"\n                  loading=\"lazy\"\n                  width=\"1600\"\n                  height=\"1600\"\n                >\n              {% endif %}\n            </div>\n          </div>\n        {% endfor %}\n      </div>\n\n      <!-- ===================== -->\n      <!-- MOBILE: Accordion -->\n      <!-- Title on top -> open shows Image + Text -->\n      <!-- ===================== -->\n      <div class=\"pf-mobile-only\">\n        {% for item in sections %}\n\n          {% capture accordion_content %}\n            <div class=\"pf-acc-content\">\n              {% if item.image != blank %}\n                <div class=\"pf-acc-image\">\n                  <img\n                    src=\"{{ item.image | image_url: width: 1200 }}\"\n                    alt=\"{{ item.title | escape }}\"\n                    loading=\"lazy\"\n                    width=\"1200\"\n                    height=\"1200\"\n                  >\n                </div>\n              {% endif %}\n\n              <div class=\"pf-acc-text pf-truncate\" data-truncate=\"true\">\n                {{ item.text | metafield_tag }}\n              </div>\n\n              <button type=\"button\" class=\"pf-readmore\" aria-expanded=\"false\">\n                Read more\n              </button>\n            </div>\n          {% endcapture %}\n\n          {%- render 'accordion',\n            title: item.title,\n            content: accordion_content,\n            prose_content: true,\n            block: block\n          -%}\n\n        {% endfor %}\n      </div>\n\n    </div>\n  </section>\n{% endif %}",
+        "text_alignment": "center"
+      }
+    },
+    "custom_liquid_YjFKMk": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "",
+        "text_alignment": "center"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -139,6 +163,8 @@
   },
   "order": [
     "main",
+    "custom_liquid_AE9Jt4",
+    "custom_liquid_YjFKMk",
     "related-products"
   ]
 }
