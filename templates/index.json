@@ -149,7 +149,7 @@
             "title": "Two rituals for your skin. One for your presence.",
             "url": "",
             "contentPosition": "bottom center",
-            "heroColor": "#000000",
+            "heroColor": "#2b2b2b",
             "heroBg": "#f7f5f3",
             "heroHasBg": true
           }
@@ -161,8 +161,8 @@
             "imageMobile": "shopify://shop_images/U9A6287.webp",
             "title": "What you put on your skin. What you leave in a room.",
             "url": "",
-            "contentPosition": "bottom left",
-            "heroColor": "#000000",
+            "contentPosition": "bottom center",
+            "heroColor": "#2b2b2b",
             "heroBg": "#f7f5f3",
             "heroHasBg": true
           }
