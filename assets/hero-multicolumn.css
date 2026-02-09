@@ -294,7 +294,7 @@
 }
 
 .fera-hero-media img[loading="lazy"] {
-    opacity: 0;
+    opacity: 1;
 }
 
 .fera-hero-media img[loading="lazy"].loaded {
