@@ -145,6 +145,7 @@
         "image_Wd7zt7": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/U9A7250a.jpg",
             "title": "We don't make skincare that demands attention.",
             "url": "",
             "contentPosition": "bottom left",
@@ -156,12 +157,13 @@
         "image_bXhmpK": {
           "type": "image",
           "settings": {
-            "title": "",
+            "image": "shopify://shop_images/U9A6243.webp",
+            "title": "Skincare designed for women who trust themselves.",
             "url": "",
-            "contentPosition": "top left",
+            "contentPosition": "bottom left",
             "heroColor": "#000000",
-            "heroBg": "#FFFFFF",
-            "heroHasBg": false
+            "heroBg": "#f7f5f3",
+            "heroHasBg": true
           }
         }
       },
