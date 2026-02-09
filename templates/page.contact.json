@@ -1,1 +1,67 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{}},"contact-form":{"type":"contact","settings":{}}},"order":["main","contact-form"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "color_scheme": "",
+        "show_title": true,
+        "page_width": "xs"
+      }
+    },
+    "rich_text_DX6eMt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_8UXkNW": {
+          "type": "heading",
+          "settings": {
+            "text": "We would love to hear from you.",
+            "heading_tag": "h1"
+          }
+        },
+        "richtext_6tEGxz": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>If you’ve got great products your making or looking to work with us then drop us a line.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_8UXkNW",
+        "richtext_6tEGxz"
+      ],
+      "name": "t:sections.rich_text.presets.rich_text.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "content_width": "sm",
+        "text_position": "center",
+        "remove_vertical_spacing": false
+      }
+    },
+    "contact-form": {
+      "type": "contact",
+      "settings": {
+        "color_scheme": "scheme-87243356-6eb7-48d8-9ce3-62b1bf29fb3f",
+        "separate_section_with_border": true,
+        "subheading": "",
+        "title": "Contact",
+        "content": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text_DX6eMt",
+    "contact-form"
+  ]
+}
