@@ -100,6 +100,13 @@
             "liquid": "{%- if product.metafields.custom.proven_stability_quality != blank -%}\n  {%- assign stability_data = product.metafields.custom.proven_stability_quality.value -%}\n  \n  {%- capture stability_content -%}\n    {%- for child in stability_data.children -%}\n      {%- if child.type == 'paragraph' -%}\n        <p>\n          {%- for text_node in child.children -%}\n            {{ text_node.value }}\n          {%- endfor -%}\n        </p>\n      {%- endif -%}\n      \n      {%- if child.type == 'list' -%}\n        {%- if child.listType == 'ordered' -%}\n          <ol>\n        {%- else -%}\n          <ul>\n        {%- endif -%}\n        \n        {%- for item in child.children -%}\n          {%- if item.type == 'list-item' -%}\n            <li>\n              {%- for text_node in item.children -%}\n                {{ text_node.value }}\n              {%- endfor -%}\n            </li>\n          {%- endif -%}\n        {%- endfor -%}\n        \n        {%- if child.listType == 'ordered' -%}\n          </ol>\n        {%- else -%}\n          </ul>\n        {%- endif -%}\n      {%- endif -%}\n    {%- endfor -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"Proven Stability & Quality\",\n    content: stability_content,\n    prose_content: true\n  -%}\n{%- endif -%}"
           }
         },
+        "liquid_VzEdCp": {
+          "type": "liquid",
+          "name": "Texture & Skin Feel",
+          "settings": {
+            "liquid": "{%- if product.metafields.custom.texture_skin_feel != blank -%}\n  {%- capture texture_content -%}\n    {%- render 'render-rich-text', rich_text_data: product.metafields.custom.texture_skin_feel.value -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"Texture & Skin Feel\",\n    content: texture_content,\n    prose_content: true\n  -%}\n{%- endif -%}"
+          }
+        },
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
@@ -126,6 +133,7 @@
         "liquid_L7XkQP",
         "liquid_iYFkMn",
         "liquid_xyVYER",
+        "liquid_VzEdCp",
         "complementary_products"
       ],
       "settings": {
