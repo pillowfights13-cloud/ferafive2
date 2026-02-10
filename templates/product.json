@@ -89,7 +89,7 @@
         "liquid_iYFkMn": {
           "type": "liquid",
           "settings": {
-            "liquid": "{%- if product.metafields.custom.how_to_use != blank -%}\n  {%- render 'accordion',\n    title: \"How to Use\",\n    content: product.metafields.custom.how_to_use,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
+            "liquid": "{%- if product.metafields.custom.how_to_use != blank -%}\n  {%- assign how_to_use_data = product.metafields.custom.how_to_use | parse_json -%}\n  \n  {%- capture how_to_use_content -%}\n    {%- for child in how_to_use_data.children -%}\n      {%- if child.type == 'list' and child.listType == 'ordered' -%}\n        <ol>\n          {%- for item in child.children -%}\n            <li>\n              {%- for text_node in item.children -%}\n                {{ text_node.value }}\n              {%- endfor -%}\n            </li>\n          {%- endfor -%}\n        </ol>\n      {%- endif -%}\n    {%- endfor -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"How to Use\",\n    content: how_to_use_content,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
           }
         },
         "complementary_products": {
