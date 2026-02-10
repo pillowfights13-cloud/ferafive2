@@ -79,6 +79,12 @@
             "show_below_gallery": false
           }
         },
+        "liquid_L7XkQP": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- if product.metafields.custom.ingredients != blank -%}\n  {%- render 'accordion', title: \"Indredients\", content: product.metafields.custom.ingredients, prose_content: true, block: block -%}\n{%- endif -%}"
+          }
+        },
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
@@ -102,6 +108,7 @@
         "share_buttons_RAVQ8E",
         "separator",
         "description",
+        "liquid_L7XkQP",
         "complementary_products"
       ],
       "settings": {
