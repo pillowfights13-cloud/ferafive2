@@ -32,6 +32,10 @@
             "liquid": "{% if product.metafields.custom.features.value %}\n  <style>\n    .pf-feature-chips {\n      display: flex;\n      flex-wrap: wrap;\n      gap: 8px;\n      margin: 10px 0 18px;\n    }\n\n    .pf-feature-chip {\n      display: inline-flex;\n      align-items: baseline;\n      column-gap: 4px;\n      padding: 6px 14px;\n      border-radius: 0px;\n      background: #fff;\n      border : 1px solid #AC1D21;\n      font-size: 12px;\n      line-height: 1.4;\n      color: #1c1c1c;\n      white-space: nowrap;\n    }\n\n    .pf-feature-chip-main {\n      font-weight: 600;\n    }\n\n    .pf-feature-chip-sub {\n      color: #777;\n    }\n\n    @media (max-width: 480px) {\n      .pf-feature-chip {\n        white-space: normal; /* wrap nicely on small screens */\n      }\n    }\n  </style>\n\n  <div class=\"pf-feature-chips\">\n    {% for feature in product.metafields.custom.features.value %}\n      {% assign parts = feature | split: \"|\" %}\n      <div class=\"pf-feature-chip\">\n        <span class=\"pf-feature-chip-main\">{{ parts[0] | strip }}</span>\n      </div>\n    {% endfor %}\n  </div>\n{% endif %}"
           }
         },
+        "judge_me_reviews_preview_badge_caVdVX": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "liquid_xUtkFy": {
           "type": "liquid",
           "name": "Notes",
@@ -145,6 +149,7 @@
         "liquid_qCCzRt",
         "title",
         "liquid_yhErpb",
+        "judge_me_reviews_preview_badge_caVdVX",
         "liquid_xUtkFy",
         "price",
         "payment_terms",
