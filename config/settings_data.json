@@ -74,11 +74,11 @@
       },
       "scheme-729e6953-0f20-4dfe-9a3c-9185208c7752": {
         "settings": {
-          "background": "#c30012",
+          "background": "#ac1d21",
           "background_gradient": "",
           "text_color": "#ffffff",
           "primary_button_background": "#ffffff",
-          "primary_button_text_color": "#c30012",
+          "primary_button_text_color": "#ac1d21",
           "circle_button_background": "#ffffff",
           "circle_button_icon": "#1c1c1c"
         }
@@ -88,9 +88,9 @@
           "background": "#ffffff",
           "background_gradient": "",
           "text_color": "#1c1c1c",
-          "primary_button_background": "#c30012",
+          "primary_button_background": "#ac1d21",
           "primary_button_text_color": "#ffffff",
-          "circle_button_background": "#c30012",
+          "circle_button_background": "#ac1d21",
           "circle_button_icon": "#ffffff"
         }
       }
