@@ -107,6 +107,12 @@
             "liquid": "{%- if product.metafields.custom.texture_skin_feel != blank -%}\n  {%- capture texture_content -%}\n    {%- render 'render-rich-text', rich_text_data: product.metafields.custom.texture_skin_feel.value -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"Texture & Skin Feel\",\n    content: texture_content,\n    prose_content: true\n  -%}\n{%- endif -%}"
           }
         },
+        "liquid_bQwJzX": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- if product.metafields.custom.who_it_s_for != blank -%}\n  {%- capture texture_content -%}\n    {%- render 'render-rich-text', rich_text_data: product.metafields.custom.who_it_s_for.value -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"Who It’s For\",\n    content: texture_content,\n    prose_content: true\n  -%}\n{%- endif -%}"
+          }
+        },
         "complementary_products": {
           "type": "complementary_products",
           "settings": {
@@ -134,6 +140,7 @@
         "liquid_iYFkMn",
         "liquid_xyVYER",
         "liquid_VzEdCp",
+        "liquid_bQwJzX",
         "complementary_products"
       ],
       "settings": {
