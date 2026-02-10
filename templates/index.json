@@ -237,10 +237,22 @@
         "text_alignment": "center"
       }
     },
+    "custom_liquid_gtAxma": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom_liquid.presets.custom_liquid.name",
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": true,
+        "remove_horizontal_spacing": true,
+        "liquid": "<section class=\"founder-story\">\n  <div class=\"founder-story__wrap\">\n\n    <!-- Left: Image -->\n    <div class=\"founder-story__media\">\n      <div class=\"founder-story__img\">\n        <img\n          src=\"https://cdn.shopify.com/s/files/1/0726/6054/9803/files/FarhaCEO.webp?v=1770628743\"\n          alt=\"Farha Jha, Founder\"\n          loading=\"lazy\"\n          width=\"900\"\n          height=\"900\"\n        >\n      </div>\n    </div>\n\n    <!-- Right: Copy -->\n    <div class=\"founder-story__copy\">\n      <h2 class=\"founder-story__headline\">\n        From a <span>filmmaker</span> to a <span>founder</span>\n      </h2>\n\n      <div class=\"founder-story__quote\">\n        <p>\n          “I spent years capturing women on camera. I saw the hesitation. The quiet power. The unspoken strength.\n          Féra Five is the brand I needed when I didn’t feel like enough. It’s not about being seen. It’s about being certain.”\n        </p>\n      </div>\n\n      <div class=\"founder-story__name\">Farha Jha</div>\n      <div class=\"founder-story__role\">Founder</div>\n    </div>\n\n  </div>\n</section>\n\n<style>\n  .founder-story{\n    background:#fff;\n    padding: clamp(48px, 6vw, 120px) 16px;\n    margin: 0;\n  }\n\n  .founder-story__wrap{\n    max-width: 1200px;\n    margin: 0 auto;\n    display: grid;\n    grid-template-columns: 1fr;\n    gap: clamp(22px, 4vw, 70px);\n    align-items: center;\n  }\n\n  /* Image container */\n  .founder-story__img{\n    width: min(520px, 100%);\n    margin: 0 auto;\n    border-radius: 14px;\n    overflow: hidden;\n    position: relative;\n    background: #f3f3f3;\n    transform: translateZ(0);\n  }\n\n  .founder-story__img img{\n    width: 100%;\n    height: auto;\n    display: block;\n    /* Desktop default: B/W */\n    filter: grayscale(100%);\n    transition: filter 420ms ease, transform 420ms ease;\n    will-change: filter, transform;\n  }\n\n  /* Hover/focus: turn to color */\n  @media (hover: hover) and (pointer: fine){\n    .founder-story__img:hover img,\n    .founder-story__img:focus-within img{\n      filter: grayscale(0%);\n      transform: scale(1.02);\n    }\n  }\n\n  /* Mobile: always color (no B/W filter) */\n  @media (hover: none), (pointer: coarse){\n    .founder-story__img img{\n      filter: grayscale(0%);\n      transform: none;\n    }\n  }\n\n  /* Soft fade at bottom like reference */\n  .founder-story__img::after{\n    content:\"\";\n    position:absolute;\n    inset:auto 0 0 0;\n    height: 42%;\n    background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #ffffff 85%);\n    pointer-events:none;\n  }\n\n  /* Copy */\n  .founder-story__copy{\n    text-align: center;\n    max-width: 640px;\n    margin: 0 auto;\n  }\n\n  .founder-story__headline{\n    margin: 0 0 14px 0;\n    font-size: clamp(24px, 3.6vw, 36px);\n    line-height: 1.15;\n    letter-spacing: -0.2px;\n    font-weight: 600;\n  }\n\n  .founder-story__headline span{\n    color: #AC1D21;\n  }\n\n  .founder-story__quote p{\n    margin: 0 0 22px 0;\n    font-size: clamp(14px, 1.8vw, 16px);\n    line-height: 1.75;\n    font-weight: 400;\n    color: rgba(0,0,0,0.75);\n  }\n\n  .founder-story__name{\n    font-size: clamp(34px, 5.2vw, 56px);\n    line-height: 1.05;\n    font-weight: 700;\n    margin: 0;\n  }\n\n  .founder-story__role{\n    font-size: clamp(14px, 2vw, 18px);\n    margin-top: 6px;\n    color: rgba(0,0,0,0.75);\n    font-weight: 500;\n  }\n\n  /* Desktop layout */\n  @media (min-width: 900px){\n    .founder-story{\n      padding-left: 40px;\n      padding-right: 40px;\n    }\n\n    .founder-story__wrap{\n      grid-template-columns: 44% 56%;\n    }\n\n    .founder-story__media{\n      display: flex;\n      justify-content: flex-start;\n    }\n\n    .founder-story__img{\n      margin: 0;\n      width: min(520px, 100%);\n    }\n\n    .founder-story__copy{\n      text-align: left;\n      margin: 0;\n      max-width: 680px;\n    }\n  }\n</style>",
+        "text_alignment": "center"
+      }
+    },
     "blog-posts": {
       "type": "blog-posts",
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-2",
         "separate_section_with_border": true,
         "blog": "",
         "posts_count": 3,
@@ -289,6 +301,7 @@
     "custom_liquid_WMzyKN",
     "featured-collections",
     "custom_liquid_BT9RRf",
+    "custom_liquid_gtAxma",
     "blog-posts",
     "newsletter",
     "custom_liquid_rbWctH"
