@@ -90,14 +90,14 @@
           "type": "liquid",
           "name": "How to Use",
           "settings": {
-            "liquid": "{%- if product.metafields.custom.how_to_use != blank -%}\n  {%- render 'accordion',\n    title: \"Proven Stability & Quality\",\n    content: product.metafields.custom.how_to_use,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
+            "liquid": "{%- if product.metafields.custom.how_to_use != blank -%}\n  {%- render 'accordion',\n    title: \"How to Use\",\n    content: product.metafields.custom.how_to_use,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
           }
         },
         "liquid_xyVYER": {
           "type": "liquid",
           "name": "Proven Stability & Quality",
           "settings": {
-            "liquid": "{%- if product.metafields.custom.proven_stability_quality != blank -%}\n  {%- render 'accordion',\n    title: \"How to Use\",\n    content: product.metafields.custom.proven_stability_quality,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
+            "liquid": "{%- if product.metafields.custom.proven_stability_quality != blank -%}\n  {%- render 'accordion',\n    title: \"Proven Stability & Quality\",\n    content: product.metafields.custom.proven_stability_quality,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
           }
         },
         "complementary_products": {
