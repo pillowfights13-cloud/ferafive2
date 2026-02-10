@@ -229,6 +229,29 @@
         "title": "Related products",
         "content": ""
       }
+    },
+    "1770714717b4695800": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_HE4cGP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_HE4cGP"
+      ],
+      "settings": {
+        "color_scheme": "scheme-2",
+        "separate_section_with_border": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false
+      }
     }
   },
   "order": [
@@ -236,6 +259,7 @@
     "custom_liquid_AE9Jt4",
     "custom_liquid_AbbMcA",
     "custom_liquid_YjFKMk",
-    "related-products"
+    "related-products",
+    "1770714717b4695800"
   ]
 }
