@@ -90,7 +90,7 @@
           "type": "liquid",
           "name": "How to Use",
           "settings": {
-            "liquid": "{%- if product.metafields.custom.how_to_use != blank -%}\n  {%- render 'accordion',\n    title: \"How to Use\",\n    content: product.metafields.custom.how_to_use,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
+            "liquid": "{%- if product.metafields.custom.how_to_use != blank -%}\n  {%- assign how_to_use_data = product.metafields.custom.how_to_use.value -%}\n  \n  {%- capture how_to_use_content -%}\n    {%- for child in how_to_use_data.children -%}\n      {%- if child.type == 'paragraph' -%}\n        <p>\n          {%- for text_node in child.children -%}\n            {{ text_node.value }}\n          {%- endfor -%}\n        </p>\n      {%- endif -%}\n      \n      {%- if child.type == 'list' -%}\n        {%- if child.listType == 'ordered' -%}\n          <ol>\n        {%- else -%}\n          <ul>\n        {%- endif -%}\n        \n        {%- for item in child.children -%}\n          {%- if item.type == 'list-item' -%}\n            <li>\n              {%- for text_node in item.children -%}\n                {{ text_node.value }}\n              {%- endfor -%}\n            </li>\n          {%- endif -%}\n        {%- endfor -%}\n        \n        {%- if child.listType == 'ordered' -%}\n          </ol>\n        {%- else -%}\n          </ul>\n        {%- endif -%}\n      {%- endif -%}\n    {%- endfor -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"How to Use\",\n    content: how_to_use_content,\n    prose_content: true\n  -%}\n{%- endif -%}"
           }
         },
         "liquid_xyVYER": {
