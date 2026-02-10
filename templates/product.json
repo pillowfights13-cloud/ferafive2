@@ -81,8 +81,15 @@
         },
         "liquid_L7XkQP": {
           "type": "liquid",
+          "name": "Indredients",
           "settings": {
             "liquid": "{%- if product.metafields.custom.ingredients != blank -%}\n  {%- render 'accordion', title: \"Indredients\", content: product.metafields.custom.ingredients, prose_content: true, block: block -%}\n{%- endif -%}"
+          }
+        },
+        "liquid_iYFkMn": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- if product.metafields.custom.how_to_use != blank -%}\n  {%- render 'accordion',\n    title: \"How to Use\",\n    content: product.metafields.custom.how_to_use,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
           }
         },
         "complementary_products": {
@@ -109,6 +116,7 @@
         "separator",
         "description",
         "liquid_L7XkQP",
+        "liquid_iYFkMn",
         "complementary_products"
       ],
       "settings": {
