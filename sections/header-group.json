@@ -17,13 +17,13 @@
         "text_DFGTtD": {
           "type": "text",
           "settings": {
-            "text": "Welcome to our shop"
+            "text": "<strong>Free shipping</strong>"
           }
         },
         "text_KmCYjH": {
           "type": "text",
           "settings": {
-            "text": "Discover our products"
+            "text": "<strong>COD Available</strong>"
           }
         }
       },
