@@ -40,7 +40,7 @@
         "settings": {
           "minimized_video_position": "right",
           "horizontal-padding": 5,
-          "vertical-padding": 150,
+          "vertical-padding": 50,
           "app-size": 50,
           "minimized_video_position_landscape": "right",
           "horizontal-padding-landscape": 5,
