@@ -97,7 +97,7 @@
           "type": "liquid",
           "name": "Proven Stability & Quality",
           "settings": {
-            "liquid": "{%- if product.metafields.custom.proven_stability_quality != blank -%}\n  {%- render 'accordion',\n    title: \"Proven Stability & Quality\",\n    content: product.metafields.custom.proven_stability_quality,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
+            "liquid": "{%- if product.metafields.custom.proven_stability_quality != blank -%}\n  {%- capture stability_content -%}\n    {%- render 'render-rich-text', rich_text_data: product.metafields.custom.proven_stability_quality -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"Proven Stability & Quality\",\n    content: stability_content,\n    prose_content: true,\n    block: block\n  -%}\n{%- endif -%}"
           }
         },
         "complementary_products": {
