@@ -126,8 +126,16 @@
         },
         "liquid_bQwJzX": {
           "type": "liquid",
+          "name": "Who It’s For",
           "settings": {
             "liquid": "{%- if product.metafields.custom.who_it_s_for != blank -%}\n  {%- capture texture_content -%}\n    {%- render 'render-rich-text', rich_text_data: product.metafields.custom.who_it_s_for.value -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"Who It’s For\",\n    content: texture_content,\n    prose_content: true\n  -%}\n{%- endif -%}"
+          }
+        },
+        "liquid_pXbdLL": {
+          "type": "liquid",
+          "name": "Find your prefect fit",
+          "settings": {
+            "liquid": "{%- if product.metafields.custom.find_your_perfect_fit != blank -%}\n  {%- assign stability_data = product.metafields.custom.find_your_perfect_fit.value -%}\n  \n  {%- capture stability_content -%}\n    {%- for child in stability_data.children -%}\n      {%- if child.type == 'paragraph' -%}\n        <p>\n          {%- for text_node in child.children -%}\n            {{ text_node.value }}\n          {%- endfor -%}\n        </p>\n      {%- endif -%}\n      \n      {%- if child.type == 'list' -%}\n        {%- if child.listType == 'ordered' -%}\n          <ol>\n        {%- else -%}\n          <ul>\n        {%- endif -%}\n        \n        {%- for item in child.children -%}\n          {%- if item.type == 'list-item' -%}\n            <li>\n              {%- for text_node in item.children -%}\n                {{ text_node.value }}\n              {%- endfor -%}\n            </li>\n          {%- endif -%}\n        {%- endfor -%}\n        \n        {%- if child.listType == 'ordered' -%}\n          </ol>\n        {%- else -%}\n          </ul>\n        {%- endif -%}\n      {%- endif -%}\n    {%- endfor -%}\n  {%- endcapture -%}\n  \n  {%- render 'accordion',\n    title: \"Proven Stability & Quality\",\n    content: stability_content,\n    prose_content: true\n  -%}\n{%- endif -%}"
           }
         },
         "complementary_products": {
@@ -160,6 +168,7 @@
         "liquid_xyVYER",
         "liquid_VzEdCp",
         "liquid_bQwJzX",
+        "liquid_pXbdLL",
         "complementary_products"
       ],
       "settings": {
