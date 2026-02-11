@@ -96,8 +96,8 @@
         "image_nxhteW": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ALL_PRODUCT_VD_OFFER_BANNER.png",
-            "mobile_image": "shopify://shop_images/MOBILE_VERSION_VD_OFFER_BANNER.png",
+            "image": "shopify://shop_images/DESKTOP_BANNER_2.png",
+            "mobile_image": "shopify://shop_images/BANNER_2_MOBILE.png",
             "subheading": "",
             "title": "",
             "mobile_text_position": "place-self-center text-center",
