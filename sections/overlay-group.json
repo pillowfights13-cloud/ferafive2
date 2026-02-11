@@ -31,6 +31,7 @@
     },
     "newsletter-popup": {
       "type": "newsletter-popup",
+      "disabled": true,
       "settings": {
         "color_scheme": "",
         "apparition_delay": 5,
@@ -46,7 +47,7 @@
       "type": "privacy-banner",
       "disabled": true,
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-729e6953-0f20-4dfe-9a3c-9185208c7752",
         "title": "🍪 Cookie policy",
         "content": "<p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p>"
       }
