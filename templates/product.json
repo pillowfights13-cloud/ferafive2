@@ -15,6 +15,7 @@
         "liquid_qCCzRt": {
           "type": "liquid",
           "name": "Best Seller",
+          "disabled": true,
           "settings": {
             "liquid": "<span class=\"pf-badge-bestseller\">\n    Best Seller\n  </span>\n\n\n<style>\n.pf-badge-bestseller {\n  display: inline-block;\n  padding: 4px 10px;\n  font-size: 12px;\n  font-weight: 600;\n  text-transform: uppercase;\n  letter-spacing: 0.04em;\n\n  background: #AC1D21;        /* red background */\n  color: #ffffff;             /* white text */\n  border: 1px solid #AC1D21;  /* red border */\n  border-radius: 0;           /* square corners */\n\n  line-height: 1.2;\n  width: auto;               /* prevents full width */\n}\n\n/* Mobile – center without stretching */\n@media (max-width: 749px) {\n  .pf-badge-bestseller {\n    display: inline-block;    /* stays compact */\n    margin: 8px auto 0;       /* center */\n  }\n}\n\nh1.product-title.h3 {\n    font-weight: bolder;\n}\n</style>"
           }
