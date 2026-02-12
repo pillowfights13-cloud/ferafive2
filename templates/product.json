@@ -180,7 +180,7 @@
         "complementary_products"
       ],
       "custom_css": [
-        ".h4,:where(.prose h4) {font-size: 1.3rem; line-height: 1.6;}"
+        ".h4,:where(.prose h4) {font-size: 1rem; line-height: 1.6;}"
       ],
       "settings": {
         "color_scheme": "scheme-87243356-6eb7-48d8-9ce3-62b1bf29fb3f",
