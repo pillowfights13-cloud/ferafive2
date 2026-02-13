@@ -282,7 +282,7 @@
       "settings": {
         "color_scheme": "scheme-2",
         "separate_section_with_border": true,
-        "blog": "",
+        "blog": "news",
         "posts_count": 3,
         "stack_on_mobile": false,
         "show_category": true,
