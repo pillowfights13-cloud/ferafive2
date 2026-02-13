@@ -11,12 +11,15 @@
   "sections": {
     "main": {
       "type": "main-article",
+      "custom_css": [
+        "@media screen and (min-width: 1024px) {.article__wrapper.container--lg {border: 1px solid; }}"
+      ],
       "settings": {
         "color_scheme": "scheme-2",
         "show_image": true,
         "enable_parallax": true,
         "image_size": "auto",
-        "content_width": "xs",
+        "content_width": "md",
         "show_date": true,
         "show_category": true,
         "show_author": true,
