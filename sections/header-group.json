@@ -31,6 +31,7 @@
         "text_DFGTtD",
         "text_KmCYjH"
       ],
+      "disabled": true,
       "custom_css": [
         ".scrolling-content__item p {text-transform: uppercase; font-weight: bold;}"
       ],
@@ -57,14 +58,13 @@
         "message_4hcfCE": {
           "type": "message",
           "settings": {
-            "text": "<strong>Free shipping / COD available</strong>"
+            "text": "<strong>Complimentary shipping on all domestic orders within India</strong>"
           }
         }
       },
       "block_order": [
         "message_4hcfCE"
       ],
-      "disabled": true,
       "settings": {
         "color_scheme": "scheme-729e6953-0f20-4dfe-9a3c-9185208c7752",
         "enable_sticky": false,
