@@ -13,6 +13,9 @@
   "sections": {
     "cart-drawer": {
       "type": "cart-drawer",
+      "custom_css": [
+        ".cart-drawer__complementary-products.complementary-products {margin-top: 70px;}"
+      ],
       "settings": {
         "color_scheme": "scheme-87243356-6eb7-48d8-9ce3-62b1bf29fb3f",
         "show_cart_note": true,
@@ -26,7 +29,7 @@
           "hydrafusion-serum"
         ],
         "cross_sell_title": "Complete with",
-        "cross_sell_stack_products": false
+        "cross_sell_stack_products": true
       }
     },
     "newsletter-popup": {
