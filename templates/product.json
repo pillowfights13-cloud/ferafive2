@@ -45,6 +45,10 @@
             "heading_tag": "h3"
           }
         },
+        "judge_me_reviews_preview_badge_9rGMzf": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -187,6 +191,7 @@
         "liquid_HLCqBQ",
         "liquid_qCCzRt",
         "title",
+        "judge_me_reviews_preview_badge_9rGMzf",
         "price",
         "quantity_selector",
         "liquid_xUtkFy",
