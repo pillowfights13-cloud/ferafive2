@@ -23,7 +23,7 @@
         "text_KmCYjH": {
           "type": "text",
           "settings": {
-            "text": "USE CODE : <strong>FERANEW</strong>"
+            "text": "USE CODE : <strong>FERA10</strong>"
           }
         }
       },
@@ -31,7 +31,6 @@
         "text_DFGTtD",
         "text_KmCYjH"
       ],
-      "disabled": true,
       "custom_css": [
         ".scrolling-content__item p {text-transform: uppercase; font-weight: bold;}"
       ],
@@ -57,6 +56,7 @@
       "blocks": {
         "message_4hcfCE": {
           "type": "message",
+          "disabled": true,
           "settings": {
             "text": "<strong>Complimentary shipping on all domestic orders within India</strong>"
           }
