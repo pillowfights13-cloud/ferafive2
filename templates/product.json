@@ -98,6 +98,12 @@
             "payment_button_text_color": ""
           }
         },
+        "liquid_4jt4Jq": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n  .ff-trust-strip {\n    --ff-red: #AC1D21;\n    --ff-red-bg: rgba(172,29,33,0.07);\n    --ff-black: #000000;\n    --ff-gray: #666666;\n    --ff-border: #E8E8E8;\n    --ff-white: #FFFFFF;\n    --ff-bg: #F7F7F7;\n    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;\n    display: grid;\n    grid-template-columns: repeat(4, 1fr);\n    gap: 10px;\n    padding: 16px 0;\n    margin-top: 16px;\n  }\n  .ff-trust-item {\n    background: var(--ff-bg);\n    border: 1px solid var(--ff-border);\n    border-radius: 4px;\n    padding: 18px 12px 16px;\n    text-align: center;\n    transition: box-shadow 0.3s ease;\n  }\n  .ff-trust-item:hover {\n    box-shadow: 0 4px 16px rgba(0,0,0,0.05);\n  }\n  .ff-trust-icon {\n    width: 40px;\n    height: 40px;\n    margin: 0 auto 10px;\n    border-radius: 50%;\n    background: var(--ff-red-bg);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n  }\n  .ff-trust-icon svg {\n    width: 18px;\n    height: 18px;\n    stroke: var(--ff-red);\n    stroke-width: 1.5;\n    fill: none;\n  }\n  .ff-trust-item h5 {\n    font-family: 'Cormorant Garamond', Georgia, serif;\n    font-size: 15px;\n    font-weight: 500;\n    color: var(--ff-black);\n    margin: 0 0 4px;\n    line-height: 1.2;\n  }\n  .ff-trust-item p {\n    font-size: 10px;\n    color: var(--ff-gray);\n    line-height: 1.5;\n    margin: 0;\n    font-weight: 300;\n  }\n  @media (max-width: 749px) {\n    .ff-trust-strip {\n      grid-template-columns: repeat(2, 1fr);\n      gap: 8px;\n      padding: 12px 0;\n      margin-top: 12px;\n    }\n    .ff-trust-item { padding: 14px 10px 12px; }\n    .ff-trust-icon { width: 36px; height: 36px; margin-bottom: 8px; }\n    .ff-trust-icon svg { width: 16px; height: 16px; }\n    .ff-trust-item h5 { font-size: 14px; }\n    .ff-trust-item p { font-size: 9.5px; }\n  }\n</style>\n\n<div class=\"ff-trust-strip\">\n  <div class=\"ff-trust-item\">\n    <div class=\"ff-trust-icon\">\n      <svg viewBox=\"0 0 24 24\"><path d=\"M9 12l2 2 4-4\"/><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>\n    </div>\n    <h5>FDA Licensed</h5>\n    <p>Approved under India's Drugs &amp; Cosmetics Act, 1940</p>\n  </div>\n  <div class=\"ff-trust-item\">\n    <div class=\"ff-trust-icon\">\n      <svg viewBox=\"0 0 24 24\"><path d=\"M6 8l6-3 6 3\"/><path d=\"M6 12l6 3 6-3\"/><path d=\"M6 16l6 3 6-3\"/></svg>\n    </div>\n    <h5>ISO 9001</h5>\n    <p>International quality management certified facility</p>\n  </div>\n  <div class=\"ff-trust-item\">\n    <div class=\"ff-trust-icon\">\n      <svg viewBox=\"0 0 24 24\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"/></svg>\n    </div>\n    <h5>GMP Certified</h5>\n    <p>Good Manufacturing Practice at every batch</p>\n  </div>\n  <div class=\"ff-trust-item\">\n    <div class=\"ff-trust-icon\">\n      <svg viewBox=\"0 0 24 24\"><path d=\"M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z\"/></svg>\n    </div>\n    <h5>Cruelty-Free &amp; Vegan</h5>\n    <p>No animal testing. Clean formulations.</p>\n  </div>\n</div>"
+          }
+        },
         "liquid_yhErpb": {
           "type": "liquid",
           "name": "Features",
@@ -199,6 +205,7 @@
         "payment_terms",
         "variant_picker",
         "buy_buttons",
+        "liquid_4jt4Jq",
         "liquid_yhErpb",
         "liquid_8CCCrf",
         "share_buttons_RAVQ8E",
