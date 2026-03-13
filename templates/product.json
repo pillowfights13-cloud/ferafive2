@@ -138,7 +138,7 @@
           "type": "liquid",
           "name": "Indredients",
           "settings": {
-            "liquid": "{%- if product.metafields.custom.ingredients != blank -%}\n  {%- render 'accordion', title: \"Indredients\", content: product.metafields.custom.ingredients, prose_content: true, block: block -%}\n{%- endif -%}"
+            "liquid": "{%- if product.metafields.custom.ingredients != blank -%}\n  {%- render 'accordion', title: \"Ingredients\", content: product.metafields.custom.ingredients, prose_content: true, block: block -%}\n{%- endif -%}"
           }
         },
         "liquid_VzEdCp": {
