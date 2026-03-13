@@ -238,26 +238,26 @@
         "text_alignment": "start"
       }
     },
-    "17714826403d14268e": {
+    "1773398775c6ea0734": {
       "type": "apps",
       "blocks": {
-        "judge_me_reviews_review_widget_7n8bCk": {
+        "judge_me_reviews_review_widget_6FJVbn": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "real_data",
+            "review_data": "sample_data",
             "max_width": 1200,
-            "show_shop_reviews": true,
+            "show_shop_reviews": false,
             "empty_state": "empty_widget"
           }
         }
       },
       "block_order": [
-        "judge_me_reviews_review_widget_7n8bCk"
+        "judge_me_reviews_review_widget_6FJVbn"
       ],
       "settings": {
-        "color_scheme": "scheme-2",
+        "color_scheme": "scheme-87243356-6eb7-48d8-9ce3-62b1bf29fb3f",
         "separate_section_with_border": true,
-        "remove_vertical_spacing": false,
+        "remove_vertical_spacing": true,
         "remove_horizontal_spacing": false
       }
     },
@@ -295,7 +295,7 @@
     "custom_liquid_ERUXtm",
     "main",
     "custom_liquid_AE9Jt4",
-    "17714826403d14268e",
+    "1773398775c6ea0734",
     "related-products",
     "custom_liquid_AbbMcA"
   ]
