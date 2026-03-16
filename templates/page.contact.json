@@ -49,6 +49,55 @@
         "remove_vertical_spacing": true
       }
     },
+    "text_with_icons_kWcTKg": {
+      "type": "text-with-icons",
+      "blocks": {
+        "item_dDJhtj": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-operator",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "Support Email",
+            "content": "<p><a href=\"mailto:contact@ferafive.com\" title=\"contact@ferafive.com\">contact@ferafive.com</a></p>"
+          }
+        },
+        "item_6ghJn3": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-phone",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "Phone Number",
+            "content": "<p>+91 9217040453</p>"
+          }
+        },
+        "item_aVkhFH": {
+          "type": "item",
+          "settings": {
+            "icon": "picto-pin",
+            "icon_width": 24,
+            "mobile_icon_width": 24,
+            "title": "Business Location",
+            "content": "<p>L-60 Kalkaji South Delhi New Delhi 110019</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_dDJhtj",
+        "item_6ghJn3",
+        "item_aVkhFH"
+      ],
+      "name": "t:sections.text_with_icons.presets.text_with_icons.name",
+      "settings": {
+        "color_scheme": "scheme-87243356-6eb7-48d8-9ce3-62b1bf29fb3f",
+        "separate_section_with_border": true,
+        "stack_on_mobile": false,
+        "icon_color": "",
+        "text_color": "",
+        "text_alignment": "center"
+      }
+    },
     "contact-form": {
       "type": "contact",
       "settings": {
@@ -75,6 +124,7 @@
   "order": [
     "main",
     "rich_text_DX6eMt",
+    "text_with_icons_kWcTKg",
     "contact-form",
     "custom_liquid_TTGzgr"
   ]
