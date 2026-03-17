@@ -402,11 +402,7 @@ button[aria-label="Open Smile.io Rewards Program"] {
   opacity: 0 !important;
 }
 
-@media screen and (min-width : 469px){
-button.smile-improved-mobile-launcher {
-    display: none;
-}
-}
+
 
 /* ── Desktop kill-switch (redundant safety net) ── */
 @media screen and (min-width: 768px) {
@@ -415,7 +411,15 @@ button.smile-improved-mobile-launcher {
     display: none !important;
     visibility: hidden !important;
     pointer-events: none !important;
-  }
+  };
+
+  button.smile-improved-mobile-launcher,
+  button[aria-label="Open Smile.io Rewards Program"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
 }
 </style>
 
