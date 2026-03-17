@@ -31,6 +31,9 @@
     "sections": {
       "ff-mobile-nav": {
         "type": "ff-mobile-nav",
+        "custom_css": [
+          "@media screen and (max-width: 767px) {#smile-ui-lite-launcher-frame-container {display: none !important; }}"
+        ],
         "settings": {
           "ff_enable": true,
           "ff_tab_order": "menu,search,whatsapp,cart,sale,rewards",
