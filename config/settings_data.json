@@ -33,7 +33,7 @@
         "type": "ff-mobile-nav",
         "custom_css": [
           "@media screen and (max-width: 767px) {#smile-ui-lite-launcher-frame-container {display: none !important; }}",
-          "#smile-ui-lite-launcher-frame-container {display: none !important; }"
+          "#smile-ui-lite-launcher-frame-container {display: none !important;}"
         ],
         "settings": {
           "ff_enable": true,
@@ -52,7 +52,7 @@
           "ff_lbl_rewards": "Rewards",
           "ff_wa_number": "+919217040453",
           "ff_wa_message": "Hi, I'd love to know more about FéraFive.",
-          "ff_sale_url": "",
+          "ff_sale_url": "https://ferafive.com/collections/sales",
           "ff_bg_color": "#faf9f7",
           "ff_border_color": "#e8e4df",
           "ff_icon_color": "#2c2a28",
