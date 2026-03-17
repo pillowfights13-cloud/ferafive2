@@ -7699,3 +7699,6 @@ ul {
   overflow: hidden;
 }
 
+@media (max-width: 767px) {
+  .site-footer { padding-bottom: 80px !important; }
+}
