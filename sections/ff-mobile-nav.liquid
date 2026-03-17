@@ -1,0 +1,544 @@
+{% comment %}
+  =====================================================
+  FéraFive — Premium Mobile Bottom Navigation
+  File: sections/ff-mobile-nav.liquid
+  Theme: Prestige (Invisible Themes)
+  
+  Design philosophy:
+  — Breathing room over density
+  — Thin strokes, generous whitespace
+  — Warm off-white bar matching FéraFive palette
+  — WhatsApp centered and slightly elevated
+  — Smile.io via #smile-home anchor
+  — Mobile ONLY (≤767px), invisible on desktop
+  =====================================================
+{% endcomment %}
+
+{%- if section.settings.enable -%}
+
+<nav id="ff-nav" class="ff-nav" aria-label="Quick navigation" role="navigation">
+
+  {%- assign order = section.settings.tab_order | split: ',' -%}
+
+  {%- for raw in order -%}
+    {%- assign k = raw | strip -%}
+
+    {%- if k == 'menu' and section.settings.show_menu -%}
+      <button class="ff-item" id="ff-menu" type="button" aria-label="Menu" onclick="ffMenu()">
+        {%- render 'ff-icon-menu' -%}
+        <span class="ff-label">{{ section.settings.lbl_menu | default: 'Menu' }}</span>
+      </button>
+
+    {%- elsif k == 'search' and section.settings.show_search -%}
+      <button class="ff-item" id="ff-search" type="button" aria-label="Search" onclick="ffSearch()">
+        {%- render 'ff-icon-search' -%}
+        <span class="ff-label">{{ section.settings.lbl_search | default: 'Search' }}</span>
+      </button>
+
+    {%- elsif k == 'whatsapp' and section.settings.show_whatsapp -%}
+      {%- assign wa_num = section.settings.wa_number | remove: '+' | remove: ' ' | remove: '-' -%}
+      {%- assign wa_msg = section.settings.wa_message | url_encode -%}
+      <a class="ff-item ff-item--wa" id="ff-wa"
+         href="https://wa.me/{{ wa_num }}{% if wa_msg != blank %}?text={{ wa_msg }}{% endif %}"
+         target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        {%- render 'ff-icon-whatsapp' -%}
+        <span class="ff-label">{{ section.settings.lbl_whatsapp | default: 'WhatsApp' }}</span>
+      </a>
+
+    {%- elsif k == 'sale' and section.settings.show_sale -%}
+      <a class="ff-item" id="ff-sale"
+         href="{{ section.settings.sale_url | default: '/collections/all' }}"
+         aria-label="{{ section.settings.lbl_sale | default: 'Sale' }}">
+        {%- render 'ff-icon-sale' -%}
+        <span class="ff-label">{{ section.settings.lbl_sale | default: 'Sale' }}</span>
+      </a>
+
+    {%- elsif k == 'rewards' and section.settings.show_rewards -%}
+      <a class="ff-item" id="ff-rewards"
+         href="#smile-home"
+         aria-label="{{ section.settings.lbl_rewards | default: 'Rewards' }}">
+        {%- render 'ff-icon-rewards' -%}
+        <span class="ff-label">{{ section.settings.lbl_rewards | default: 'Rewards' }}</span>
+      </a>
+
+    {%- endif -%}
+  {%- endfor -%}
+
+</nav>
+
+{%- endif -%}
+
+{%- comment -%} ── Inline SVG snippets (avoids extra snippet files) ── {%- endcomment -%}
+
+<style>
+/* ──────────────────────────────────────────────
+   FéraFive Premium Mobile Nav
+   Prestige theme — mobile only
+────────────────────────────────────────────── */
+
+/* Scoped reset */
+#ff-nav, #ff-nav * {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hide entirely on desktop */
+#ff-nav { display: none; }
+
+@media (max-width: 767px) {
+
+  /* ── Bar shell ── */
+  #ff-nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 199;
+    height: 64px;
+    padding: 0 8px;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background-color: {{ section.settings.bg_color }};
+    border-top: 0.5px solid {{ section.settings.border_color }};
+    /* Subtle blur for premium feel on supported devices */
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  /* ── Push Prestige theme content above bar ── */
+  /* Prestige uses #MainContent or .main-content */
+  body {
+    --ff-nav-height: calc(64px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Universal body padding — works on Prestige */
+  body > .shopify-section:last-of-type,
+  #shopify-section-footer,
+  .site-footer,
+  footer {
+    padding-bottom: var(--ff-nav-height) !important;
+    margin-bottom: 0 !important;
+  }
+
+  /* Extra safety for full-page layouts */
+  body {
+    padding-bottom: var(--ff-nav-height) !important;
+  }
+
+  /* ── Each tab item ── */
+  .ff-item {
+    /* Premium vertical rhythm — icon top-aligned, label at bottom */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 3px;
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    padding: 10px 4px 10px;
+    color: {{ section.settings.icon_color }};
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+    /* Smooth state transition */
+    transition: color 180ms ease, transform 150ms ease;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+  }
+
+  .ff-item:active {
+    transform: translateY(-1px);
+    color: {{ section.settings.icon_active_color }};
+  }
+
+  .ff-item.ff-active {
+    color: {{ section.settings.icon_active_color }};
+  }
+
+  /* ── Icon ── */
+  .ff-item svg {
+    display: block;
+    flex-shrink: 0;
+    /* Thin, refined strokes */
+  }
+
+  /* ── Label ── */
+  .ff-label {
+    display: block;
+    font-size: 9.5px;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1;
+    color: inherit;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 58px;
+    /* Prevent label from being clickable target confusion */
+    pointer-events: none;
+  }
+
+  /* ── WhatsApp — elevated center hero tab ── */
+  .ff-item--wa {
+    position: relative;
+    /* Slightly taller touch target */
+  }
+
+  .ff-item--wa .ff-wa-bubble {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: #25D366;
+    border-radius: 50%;
+    margin-bottom: 0;
+    /* Lift above bar */
+    margin-top: -14px;
+    box-shadow: 0 2px 12px rgba(37, 211, 102, 0.30);
+    transition: transform 150ms ease, box-shadow 150ms ease;
+    flex-shrink: 0;
+  }
+
+  .ff-item--wa:active .ff-wa-bubble {
+    transform: scale(0.94);
+    box-shadow: 0 1px 6px rgba(37, 211, 102, 0.20);
+  }
+
+  .ff-item--wa .ff-wa-bubble svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* ── Active indicator dot (refined, not heavy) ── */
+  .ff-active-dot {
+    display: none;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: {{ section.settings.icon_active_color }};
+  }
+
+  .ff-item.ff-active .ff-active-dot {
+    display: block;
+  }
+
+  /* Don't show dot on WhatsApp */
+  .ff-item--wa .ff-active-dot {
+    display: none !important;
+  }
+
+}
+
+/* ── Desktop: absolute zero footprint ── */
+@media (min-width: 768px) {
+  #ff-nav { display: none !important; }
+}
+</style>
+
+{% comment %} ── Icons defined inline — no extra snippet files needed ── {% endcomment %}
+{% comment %} These render as SVG strings directly within the Liquid loop above {% endcomment %}
+
+<script>
+(function() {
+  'use strict';
+
+  /* ─── Prestige theme selectors ─── */
+  var PRESTIGE_MENU_SELECTORS = [
+    /* Prestige standard */
+    '.header__icon--nav-toggle',
+    'button[aria-controls="sidebar-menu"]',
+    '[data-action="open-drawer"][data-drawer="sidebar-menu"]',
+    '.hamburger',
+    /* Dawn fallback */
+    'header-drawer summary',
+    '[aria-controls*="menu-drawer"]',
+    'details[id*="menu"] > summary'
+  ];
+
+  var PRESTIGE_SEARCH_SELECTORS = [
+    /* Prestige */
+    '.header__icon--search',
+    'button[aria-controls="search-popup"]',
+    '[data-action="open-search"]',
+    '.header__search-toggle',
+    /* Generic fallback */
+    'button[aria-label*="earch"]',
+    '[href="/search"]'
+  ];
+
+  /* ─── Open menu drawer ─── */
+  window.ffMenu = function() {
+    var found = false;
+    for (var i = 0; i < PRESTIGE_MENU_SELECTORS.length; i++) {
+      var el = document.querySelector(PRESTIGE_MENU_SELECTORS[i]);
+      if (el) {
+        el.click();
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      /* Last resort: open first <details> that looks like a nav */
+      var d = document.querySelector('details[class*="nav"], details[class*="menu"]');
+      if (d) d.setAttribute('open', '');
+    }
+    ffSetActive('ff-menu');
+  };
+
+  /* ─── Open search ─── */
+  window.ffSearch = function() {
+    var found = false;
+    for (var i = 0; i < PRESTIGE_SEARCH_SELECTORS.length; i++) {
+      var el = document.querySelector(PRESTIGE_SEARCH_SELECTORS[i]);
+      if (el) {
+        el.click();
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      /* Navigate to search page as fallback */
+      window.location.href = '/search';
+    }
+    ffSetActive('ff-search');
+  };
+
+  /* ─── Active tab state ─── */
+  window.ffSetActive = function(id) {
+    var items = document.querySelectorAll('.ff-item');
+    for (var i = 0; i < items.length; i++) {
+      items[i].classList.remove('ff-active');
+    }
+    var target = document.getElementById(id);
+    if (target) target.classList.add('ff-active');
+  };
+
+  /* ─── Set initial active state from URL ─── */
+  function ffInitActive() {
+    var p = window.location.pathname;
+    if (p.indexOf('/search') !== -1) {
+      ffSetActive('ff-search');
+    } else if (
+      p.indexOf('/collections/sale') !== -1 ||
+      p.indexOf('/sale') !== -1 ||
+      p.indexOf('/discount') !== -1
+    ) {
+      ffSetActive('ff-sale');
+    } else if (window.location.hash === '#smile-home') {
+      ffSetActive('ff-rewards');
+    }
+    /* Menu and WhatsApp never get persistent active state */
+  }
+
+  /* ─── Handle Rewards / Smile click ─── */
+  /* Smile.io listens to the #smile-home hash natively — the <a href="#smile-home">
+     in the HTML is the correct and official trigger. No JS needed here.
+     But we still set the visual active state. */
+  var rewardsEl = document.getElementById('ff-rewards');
+  if (rewardsEl) {
+    rewardsEl.addEventListener('click', function() {
+      ffSetActive('ff-rewards');
+    });
+  }
+
+  /* ─── Run ─── */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ffInitActive);
+  } else {
+    ffInitActive();
+  }
+
+  /* ─── Prestige: hide its own floating WhatsApp if present ───
+     Prestige doesn't ship one by default, but some app injections
+     do. Uncomment if you see a duplicate floating button.
+  setTimeout(function() {
+    var floaters = document.querySelectorAll(
+      '.whatsapp-chat-widget:not(#ff-wa), ' +
+      '[class*="whatsapp-float"]:not(#ff-wa), ' +
+      'a[href*="wa.me"]:not(#ff-wa)'
+    );
+    floaters.forEach(function(el) {
+      // Only on mobile
+      if (window.innerWidth <= 767) el.style.display = 'none';
+    });
+  }, 1500);
+  */
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "FF Mobile Nav",
+  "tag": "div",
+  "class": "ff-mobile-nav-section",
+  "limit": 1,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Enable"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Show mobile bottom nav",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Tab order & visibility"
+    },
+    {
+      "type": "paragraph",
+      "content": "Edit the order field with comma-separated keys to reposition tabs. Keys: menu, search, whatsapp, sale, rewards"
+    },
+    {
+      "type": "text",
+      "id": "tab_order",
+      "label": "Tab order",
+      "default": "menu,search,whatsapp,sale,rewards"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_menu",
+      "label": "Show Menu",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "Show Search",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_whatsapp",
+      "label": "Show WhatsApp",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sale",
+      "label": "Show Sale",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rewards",
+      "label": "Show Rewards",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Labels"
+    },
+    {
+      "type": "text",
+      "id": "lbl_menu",
+      "label": "Menu",
+      "default": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "lbl_search",
+      "label": "Search",
+      "default": "Search"
+    },
+    {
+      "type": "text",
+      "id": "lbl_whatsapp",
+      "label": "WhatsApp",
+      "default": "WhatsApp"
+    },
+    {
+      "type": "text",
+      "id": "lbl_sale",
+      "label": "Sale",
+      "default": "Sale"
+    },
+    {
+      "type": "text",
+      "id": "lbl_rewards",
+      "label": "Rewards",
+      "default": "Rewards"
+    },
+    {
+      "type": "header",
+      "content": "WhatsApp"
+    },
+    {
+      "type": "text",
+      "id": "wa_number",
+      "label": "Phone number (with country code)",
+      "default": "+919217040453"
+    },
+    {
+      "type": "text",
+      "id": "wa_message",
+      "label": "Pre-filled message",
+      "default": "Hi, I'd love to know more about FéraFive."
+    },
+    {
+      "type": "header",
+      "content": "Links"
+    },
+    {
+      "type": "url",
+      "id": "sale_url",
+      "label": "Sale page",
+      "info": "e.g. /collections/sale or /collections/all"
+    },
+    {
+      "type": "header",
+      "content": "Colours"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Bar background",
+      "default": "#FAF9F7",
+      "info": "Warm off-white — matches FéraFive palette"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Top border",
+      "default": "#E8E4DF"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon & label",
+      "default": "#2A2A2A"
+    },
+    {
+      "type": "color",
+      "id": "icon_active_color",
+      "label": "Active state",
+      "default": "#1A1A1A"
+    }
+  ],
+  "presets": [
+    {
+      "name": "FF Mobile Nav",
+      "settings": {
+        "enable": true,
+        "tab_order": "menu,search,whatsapp,sale,rewards"
+      }
+    }
+  ]
+}
+{% endschema %}
