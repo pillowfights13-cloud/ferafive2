@@ -1,18 +1,3 @@
-{% comment %}
-  =====================================================
-  FéraFive — Premium Mobile Bottom Navigation
-  File: sections/ff-mobile-nav.liquid
-  Theme: Prestige (Invisible Themes)
-  
-  Design philosophy:
-  — Breathing room over density
-  — Thin strokes, generous whitespace
-  — Warm off-white bar matching FéraFive palette
-  — WhatsApp centered and slightly elevated
-  — Smile.io via #smile-home anchor
-  — Mobile ONLY (≤767px), invisible on desktop
-  =====================================================
-{% endcomment %}
 
 {%- if section.settings.enable -%}
 
@@ -244,7 +229,10 @@
 
 /* ── Desktop: absolute zero footprint ── */
 @media (min-width: 768px) {
-  #ff-nav { display: none !important; }
+  #ff-nav { display: none !important; };
+  iframe#kiwi-big-iframe-wrapper {
+    display: none;
+}
 }
 </style>
 
