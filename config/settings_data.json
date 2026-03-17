@@ -40,7 +40,7 @@
           "ff_tab_order": "menu,search,whatsapp,cart,sale,rewards",
           "ff_show_menu": true,
           "ff_show_search": true,
-          "ff_show_whatsapp": true,
+          "ff_show_whatsapp": false,
           "ff_show_cart": false,
           "ff_show_sale": true,
           "ff_show_rewards": true,
