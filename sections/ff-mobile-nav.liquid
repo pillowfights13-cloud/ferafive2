@@ -404,20 +404,40 @@ button[aria-label="Open Smile.io Rewards Program"] {
 
 
 
-/* ── Desktop kill-switch (redundant safety net) ── */
-@media screen and (min-width: 768px) {
-  #ff-mobile-nav,
-  #ff-nav-spacer {
-    display: none !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  };
 
- smile-improved-mobile-launcher{
-    display : none;
-  }
-}
 </style>
+
+
+<script>
+if (window.innerWidth <= 767) {
+  var smileLauncher = document.getElementById('smile-ui-lite-launcher-frame-container');
+  if (smileLauncher) smileLauncher.style.display = 'none';
+}
+</script>
+
+<script>
+  if (window.innerWidth <= 767) {
+    var ffTargets = ['smile-ui-lite-launcher-frame-container', 'kiwi-big-iframe-wrapper'];
+
+    ffTargets.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) {
+        el.style.display = 'none';
+      }
+    });
+
+    var ffObserver = new MutationObserver(function() {
+      ffTargets.forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+      });
+    });
+
+    ffObserver.observe(document.body, { childList: true, subtree: true });
+  }
+</script>
+
+
 
 <script>
 /* ════════════════════════════════════════════════════════
@@ -495,8 +515,7 @@ button[aria-label="Open Smile.io Rewards Program"] {
 
   /* ── Public: Search ── */
   window.ffNavSearch = function() {
-    ffNavClick(FF_SEARCH, '/search');
-    ffNavSetActive('ff-tab--search');
+    window.location.replaces('https://ferafive.com/search')
   };
 
   /* ── Public: Cart ── */
