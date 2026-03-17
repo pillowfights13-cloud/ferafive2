@@ -32,7 +32,8 @@
       "ff-mobile-nav": {
         "type": "ff-mobile-nav",
         "custom_css": [
-          "@media screen and (max-width: 767px) {#smile-ui-lite-launcher-frame-container {display: none !important; }}"
+          "@media screen and (max-width: 767px) {#smile-ui-lite-launcher-frame-container {display: none !important; }}",
+          "#smile-ui-lite-launcher-frame-container {display: none !important; }"
         ],
         "settings": {
           "ff_enable": true,
