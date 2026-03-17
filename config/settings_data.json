@@ -28,6 +28,34 @@
     "social_facebook": "https://www.facebook.com/people/F%C3%A9ra-Five-Beauty/61578652970292/",
     "social_instagram": "https://www.instagram.com/ferafive/",
     "favicon": "shopify://shop_images/favicon.webp",
+    "sections": {
+      "ff-mobile-nav": {
+        "type": "ff-mobile-nav",
+        "settings": {
+          "ff_enable": true,
+          "ff_tab_order": "menu,search,whatsapp,cart,sale,rewards",
+          "ff_show_menu": true,
+          "ff_show_search": true,
+          "ff_show_whatsapp": true,
+          "ff_show_cart": false,
+          "ff_show_sale": true,
+          "ff_show_rewards": true,
+          "ff_lbl_menu": "Menu",
+          "ff_lbl_search": "Search",
+          "ff_lbl_whatsapp": "WhatsApp",
+          "ff_lbl_cart": "Cart",
+          "ff_lbl_sale": "Sale",
+          "ff_lbl_rewards": "Rewards",
+          "ff_wa_number": "+919217040453",
+          "ff_wa_message": "Hi, I'd love to know more about FéraFive.",
+          "ff_sale_url": "",
+          "ff_bg_color": "#faf9f7",
+          "ff_border_color": "#e8e4df",
+          "ff_icon_color": "#2c2a28",
+          "ff_icon_active_color": "#1a1a1a"
+        }
+      }
+    },
     "content_for_index": [],
     "blocks": {
       "14060646107696862457": {
