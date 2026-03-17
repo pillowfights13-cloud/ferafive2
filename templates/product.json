@@ -87,6 +87,12 @@
             "size_chart_page": ""
           }
         },
+        "liquid_VrQVyV": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "{%- assign price_value = product.selected_or_first_available_variant.price -%}\n{%- assign points_earned = price_value | times: 0.05 | floor -%}\n\n<p class=\"points-message\" style=\"display: flex; align-items: center; gap: 5px;\">\n  <img src=\"{{ 'dollar.svg' | asset_url }}\" alt=\"Dollar Icon\" width=\"20\" height=\"20\">\n  Points worth <strong>{{ points_earned }}</strong> await you with this product!\n</p>"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -205,6 +211,7 @@
         "liquid_kii8Dm",
         "payment_terms",
         "variant_picker",
+        "liquid_VrQVyV",
         "buy_buttons",
         "liquid_yhErpb",
         "liquid_4jt4Jq",
