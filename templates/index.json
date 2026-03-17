@@ -274,7 +274,7 @@
         "separate_section_with_border": false,
         "remove_vertical_spacing": true,
         "remove_horizontal_spacing": true,
-        "liquid": "<script>\nif (window.innerWidth <= 767) {\n  var smileLauncher = document.getElementById('smile-ui-lite-launcher-frame-container');\n  if (smileLauncher) smileLauncher.style.display = 'none';\n}\n</script>\n\n<script>\n  if (window.innerWidth <= 767) {\n    var ffTargets = ['smile-ui-lite-launcher-frame-container', 'kiwi-big-iframe-wrapper'];\n\n    ffTargets.forEach(function(id) {\n      var el = document.getElementById(id);\n      if (el) {\n        el.style.display = 'none';\n      }\n    });\n\n    var ffObserver = new MutationObserver(function() {\n      ffTargets.forEach(function(id) {\n        var el = document.getElementById(id);\n        if (el) el.style.display = 'none';\n      });\n    });\n\n    ffObserver.observe(document.body, { childList: true, subtree: true });\n  }\n</script>",
+        "liquid": "",
         "text_alignment": "center"
       }
     }
